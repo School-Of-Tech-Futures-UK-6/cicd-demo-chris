@@ -6,7 +6,7 @@ steps:
 
 # Push the container to the registry
 - name: 'gcr.io/cloud-builders/docker'
-  args: [ 'push', 'gcr.io/sotf-6/cicd-demo']
+  args: [ 'push', 'gcr.io/sotf-6/cicd-demo-chris']
 
 # Deploy to Cloud Run
 - name: 'gcr.io/cloud-builders/gcloud'
