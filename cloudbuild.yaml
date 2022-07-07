@@ -2,11 +2,11 @@ steps:
 
 # Build docker container
 - name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '--tag=gcr.io/sotf-6/cicd-demo-chris', '--file=./Dockerfile.prod', '.']
+  args: [ 'build', '--tag=gcr.io/acn-schooloftechfutures3/github.com/school-of-tech-futures-uk-6/cicd-demo-chris', '--file=./Dockerfile.prod', '.']
 
 # Push the container to the registry
 - name: 'gcr.io/cloud-builders/docker'
-  args: [ 'push', 'gcr.io/sotf-6/cicd-demo-chris']
+  args: [ 'push', 'gcr.io/acn-schooloftechfutures3/github.com/school-of-tech-futures-uk-6/cicd-demo-chris']
 
 # Deploy to Cloud Run
 - name: 'gcr.io/cloud-builders/gcloud'
@@ -15,11 +15,11 @@ steps:
   - 'deploy'
   - 'ci-cd-demo-service-chris'
   - '--image'
-  - 'gcr.io/sotf-6/cicd-demo-chris'
+  - 'gcr.io/acn-schooloftechfutures3/github.com/school-of-tech-futures-uk-6/cicd-demo-chris'
   - '--region'
   - 'us-central1'
   - '--platform'
   - 'managed'
   - '--allow-unauthenticated'
 images:
-  - 'gcr.io/sotf-6/cicd-demo-chris'
+  - 'gcr.io/acn-schooloftechfutures3/github.com/school-of-tech-futures-uk-6/cicd-demo-chris'
