@@ -2,7 +2,7 @@ steps:
 
 # Build docker container
 - name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '--tag=gcr.io/sotf-6/cicd-demo', '--file=./Dockerfile.prod', '.']
+  args: [ 'build', '--tag=gcr.io/sotf-6/cicd-demo-chris', '--file=./Dockerfile.prod', '.']
 
 # Push the container to the registry
 - name: 'gcr.io/cloud-builders/docker'
@@ -15,11 +15,11 @@ steps:
   - 'deploy'
   - 'cloudrunservice'
   - '--image'
-  - 'gcr.io/sotf-6/cicd-demo'
+  - 'gcr.io/sotf-6/cicd-demo-chris'
   - '--region'
   - 'us-central1'
   - '--platform'
   - 'managed'
   - '--allow-unauthenticated'
 images:
-  - 'gcr.io/sotf-6/cicd-demo'
+  - 'gcr.io/sotf-6/cicd-demo-chris'
