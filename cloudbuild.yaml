@@ -13,7 +13,7 @@ steps:
   args:
   - 'run'
   - 'deploy'
-  - 'cloudrunservice'
+  - 'ci-cd-demo-service-chris'
   - '--image'
   - 'gcr.io/sotf-6/cicd-demo-chris'
   - '--region'
